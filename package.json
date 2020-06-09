@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "@ember/optional-features": "^1.0.0",
+    "add": "^2.0.6",
     "babel-eslint": "^10.0.3",
     "broccoli-asset-rev": "^3.0.0",
     "ember-auto-import": "^1.5.2",
@@ -47,5 +48,11 @@
   },
   "engines": {
     "node": "8.* || >= 10.*"
+  },
+  "dependencies": {
+    "@fullhuman/postcss-purgecss": "^2.2.0",
+    "broccoli-postcss-single": "^4.0.1",
+    "broccoli-source": "^3.0.0",
+    "tailwindcss": "^1.4.6"
   }
 }

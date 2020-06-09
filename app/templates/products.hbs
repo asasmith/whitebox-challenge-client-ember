@@ -1,6 +1,15 @@
 {{outlet}}
-<h1>products here</h1>
 
-{{#each this.model as |product|}}
-  <p>product{{product.name}}</p>
-{{/each}}
+<div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+  {{#each this.model as |product|}}
+    <div class="flex-column mb-10">
+      <div class="mb-5">
+        <img class="w-full" src={{product.image}} alt="">   
+      </div>
+      <div>
+        <p>{{product.name}}</p>
+        <p>${{product.price}}</p>
+      </div>
+    </div>
+  {{/each}}
+</div>
