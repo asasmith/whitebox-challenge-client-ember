@@ -15,16 +15,16 @@ module.exports = function(defaults) {
   console.log(plugins)
 
   if (EmberApp.env() === 'production') {
-    plugins.push({
-        module: require('@fullhuman/postcss-purgecss'),
-        options: [
-          join(__dirname, 'app', 'index.html'),
-          join(__dirname, 'app', '**', '*.js'),
-          join(__dirname, 'app', '**', '*.hbs'),
-        ],
-        defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || [],
-        whitelistPattern: [/^_/],
-    });
+    // plugins.push({
+    //     module: require('@fullhuman/postcss-purgecss'),
+    //     options: [
+    //       join(__dirname, 'app', 'index.html'),
+    //       join(__dirname, 'app', '**', '*.js'),
+    //       join(__dirname, 'app', '**', '*.hbs'),
+    //     ],
+    //     defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || [],
+    //     whitelistPattern: [/^_/],
+    // });
   }
 
   const tailwindNode = compilePostCSS(
